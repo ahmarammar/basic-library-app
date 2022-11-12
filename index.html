@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library - small application</title>
+  <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+  <form action="#">
+    <!-- Book Name  -->
+    <div>
+      <label for="bookName">Enter the book name</label>
+      <input type="text" id="bookName" required minlength="3" maxlength="20">
+    </div>
+    <!-- Author Name  -->
+    <div>
+      <label for="authorName">Enter the author name</label>
+      <input type="text" id="authorName" required minlength="3" maxlength="20">
+    </div>
+    <!-- Total Pages  -->
+    <div>
+      <label for="totalPages">Enter the total pages</label>
+      <input type="text" id="totalPages" required minlength="1" max="4">
+    </div>
+    <!-- Read Status  -->
+    <div>
+      <label for="readOrNot">Have you read the book completely</label>
+      <select name="readOrNot" id="readOrNot">
+        <option value="read">Yes</option>
+        <option value="notRead">No</option>
+      </select>
+    </div>
+    <button type="submit" id="submitIt">Submit</button>
+  </form>
+  <div class="showcase">
+    
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+</html>
