@@ -29,13 +29,12 @@ function displayBooks( myLibrary ){
 
     document.querySelector(`.card${i+1}`).innerHTML = `<h3 class='author${i+1}'></h3><h2 class = 'book${i+1}'></h2><h3 class='pages${i+1}'></h3>`
 
-    document.querySelector(`.author${i+1}`).innerHTML = myLibrary[i].author;
+    document.querySelector(`.author${i+1}`).innerHTML = "Author Name: "+myLibrary[i].author;
     
-    document.querySelector(`.book${i+1}`).innerHTML = myLibrary[i].name;
+    document.querySelector(`.book${i+1}`).innerHTML = "Book Name: "+myLibrary[i].name;
 
-    document.querySelector(`.pages${i+1}`).innerHTML = myLibrary[i].pages;
+    document.querySelector(`.pages${i+1}`).innerHTML = "Total Pages: "+myLibrary[i].pages;
   }
-  console.log(showcase);
 }
 
 let bookName = "";
@@ -57,7 +56,11 @@ document.getElementById("totalPages").addEventListener("change",function(e){
 })
 
 document.getElementById("submitIt").addEventListener("click",function(e){
+  e.preventDefault();
   if(bookName !== '' && totalPages !== 0 && authorName !== ''){
     Book();
+    document.getElementById("bookName").value = "";
+    document.getElementById("authorName").value = "";
+    document.getElementById("totalPages").value = "";
   }
 })
