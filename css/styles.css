@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .header{
   background-color: #231F20;
   color: gainsboro;
@@ -62,6 +67,7 @@ button[type='submit']:hover{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex-grow: 1;
 }
 .showcase div{
   background-color: #f3e5bc;
@@ -70,6 +76,8 @@ button[type='submit']:hover{
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  min-width: 70%;
+  margin: 0 auto;
   color: #333;
 }
 .author{
